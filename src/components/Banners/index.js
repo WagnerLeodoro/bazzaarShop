@@ -1,10 +1,11 @@
 import { View, Text, Dimensions, ScrollView, Image } from 'react-native'
 import React, { useState } from 'react'
 
-import bannerFeminino from '../assets/img/bannerFeminino.png'
-import bannerMasculino from '../assets/img/bannerMasculino.png'
-import bannerLoja from '../assets/img/bannerBazzaar.png'
 import { styles } from './styles'
+
+import bannerFeminino from '../../assets/img/bannerFeminino.png'
+import bannerMasculino from '../../assets/img/bannerMasculino.png'
+import bannerLoja from '../../assets/img/bannerBazzaar.png'
 
 const images = [
     bannerFeminino,

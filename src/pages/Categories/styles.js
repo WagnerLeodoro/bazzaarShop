@@ -3,13 +3,8 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: '90%',
-        height: 130,
         marginLeft: 20,
-        marginTop: 10,
-        marginBottom: 30,
-        alignItems: 'center',
-        backgroundColor: '#e0e0e0'
+        alignItems: 'flex-start',
     },
     titleContainer: {
         height: 30,
@@ -18,19 +13,31 @@ export const styles = StyleSheet.create({
     },
     title: {
         textTransform: 'uppercase',
-        fontSize: 16,
+        fontSize: 20,
         fontFamily: 'Roboto',
-        textAlign: 'justify',
         lineHeight: 20,
         color: 'black',
         fontWeight: '500'
     },
+    textContainer: {
+        flex: 1,
+        alignItems: 'center',
+        textAlign: 'center',
+    },
+    line: {
+        flex: 1,
+        width: 360,
+        marginTop: 10,
+        padding: 5,
+        borderRadius: 5,
+        backgroundColor: '#F2B749',
+        shadowOffset: { width: 4, height: 2 },
+        elevation: 5,
+    },
     text: {
-        fontSize: 14,
+        fontSize: 18,
         fontFamily: 'Roboto',
-        textAlign: 'justify',
         lineHeight: 20,
         color: 'black',
-        fontWeight: '500',
     }
 });

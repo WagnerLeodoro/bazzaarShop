@@ -1,11 +1,8 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, FlatList } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, FlatList } from 'react-native'
 import React from 'react'
-import Cards from '../Cards'
 
-import Banners from '../Banners'
-import AboutUs from '../AboutUs'
-import Footer from '../Footer'
-import Header from '../Header'
+import Cards from '../../components/Cards'
+import Banners from '../../components/Banners'
 
 export const Divisor = () => {
   return <View style={styles.divisor} />
@@ -14,13 +11,13 @@ export const Divisor = () => {
 const modaFeminina = [
   {
     id: '1',
-    img: require('../assets/img/6.png'),
+    img: require('../../assets/img/6.png'),
     product: 'Blusa Feminina Manga Longa',
     price: '89.90'
   },
   {
     id: '2',
-    img: require('../assets/img/7.png'),
+    img: require('../../assets/img/7.png'),
     product: 'Macaquinho Acinturado Verão',
     price: '109.90'
   }
@@ -29,13 +26,13 @@ const modaFeminina = [
 const modaMasculina = [
   {
     id: '1',
-    img: require('../assets/img/4.png'),
+    img: require('../../assets/img/4.png'),
     product: 'Camisa Básica',
     price: '29.90'
   },
   {
     id: '2',
-    img: require('../assets/img/5.png'),
+    img: require('../../assets/img/5.png'),
     product: 'Blaser Slim',
     price: '189.90'
   }
@@ -74,9 +71,6 @@ const Home = ({ navigation }) => {
             />
           </View>
         </View>
-        <Divisor />
-        <AboutUs />
-        <Footer />
       </ScrollView>
     </View>
   )

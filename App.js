@@ -1,23 +1,50 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from "react-native-vector-icons/Feather";
 
-import Details from './src/Details'
-import Home from './src/Home/Home'
-import Header from './src/Header';
+import Header from './src/components/Header';
+import StackNav from './src/routes/StackNav';
+import AboutUs from './src/pages/AboutUs';
+import Categories from './src/pages/Categories'
+import Payment from './src/pages/Payment';
 
-const Stack = createNativeStackNavigator();
+const { Navigator, Screen } = createBottomTabNavigator();
+
+const icons =
+{
+    Home: {
+        name: 'home',
+    },
+    Categorias: {
+        name: 'menu',
+    },
+    Sobre: {
+        name: 'info',
+    },
+    Cartões: {
+        name: 'credit-card',
+    }
+}
 
 export default function App() {
     return (
         <NavigationContainer>
-            {
-                <Stack.Navigator initialRouteName="Home">
-                    <Stack.Screen name="Home" component={Home} options={{ headerTitle: (props) => <Header {...props} /> }} />
-                    <Stack.Screen name="Detalhes" component={Details} />
-                </Stack.Navigator>
-            }
+            <Navigator
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ color, size }) => {
+                        const { name } = icons[route.name]
+                        return <Icon name={name} size={size} color={color} />
+                    },
+                })}
+            >
+                <Screen name="Home" component={StackNav} options={{
+                    headerShown: false,
+                }} />
+                <Screen name="Sobre" component={AboutUs} options={{ headerTitle: (props) => <Header {...props} /> }} />
+                <Screen name="Categorias" component={Categories} options={{ headerTitle: (props) => <Header {...props} /> }} />
+                <Screen name="Cartões" component={Payment} options={{ headerTitle: (props) => <Header {...props} /> }} />
+            </Navigator>
         </NavigationContainer>
     )
 }

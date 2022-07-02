@@ -8,59 +8,56 @@ export const styles = StyleSheet.create({
         marginLeft: 20,
         marginBottom: 30,
         alignItems: 'center',
-        opacity: 0.8
+    },
+    titleContainer: {
+        height: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    title: {
+        textTransform: 'uppercase',
+        fontSize: 16,
+        fontFamily: 'Roboto',
+        lineHeight: 20,
+        color: 'black',
+        fontWeight: '500'
     },
     textContainer: {
+        display: 'flex',
         width: 360,
         height: 150,
-        backgroundColor: "#000000c0",
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        textAlign: 'center',
     },
     text: {
-        fontSize: 16,
+        fontSize: 14,
         fontFamily: 'Roboto',
         textAlign: 'center',
         lineHeight: 20,
-        color: 'white',
-        fontWeight: '700',
+        color: 'black',
+        fontWeight: '500'
+    },
+    image: {
+        marginTop: 10,
+        height: 180,
     },
     contact: {
-        display: 'flex',
-        width: 360,
-        height: 100,
-        marginLeft: 20,
-        marginBottom: 10,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
     },
     socialContainer: {
         margin: 3,
         justifyContent: 'space-around',
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     social: {
         width: 150,
-        height: 100,
         marginLeft: 5,
     },
     socialIcon: {
         width: 30,
     },
-    payment: {
-        width: 150,
-        height: 100,
-        marginRight: 5,
-    },
-    creditCardContainer: {
-        margin: 3,
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flexDirection: 'row'
-    },
-    creditCard: {
-        width: 30,
-    }
 });

@@ -2,14 +2,14 @@ import { View, Text, Image, ScrollView } from 'react-native'
 import React from 'react'
 import { styles } from './styles'
 
-import Button from '../Button'
+import Button from '../../components/Button'
 
 export default function Details() {
     return (
         <View style={styles.container}>
             <ScrollView>
                 <View style={styles.product}>
-                    <Image source={require('../assets/img/6.png')} />
+                    <Image source={require('../../assets/img/6.png')} />
                 </View>
                 <View style={styles.productInfo}>
                     <View>

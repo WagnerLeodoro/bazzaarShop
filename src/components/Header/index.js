@@ -1,9 +1,9 @@
-import { View, Text, Image } from 'react-native'
+import { View, Image } from 'react-native'
 import React from 'react'
 
-import logo from '../assets/img/Bazzaar.png'
+import logo from '../../assets/img/Bazzaar.png'
 import { styles } from './styles'
-import { Divisor } from '../Home/Home'
+import { Divisor } from '../../pages/Home/Home'
 
 export default function Header() {
     return (
